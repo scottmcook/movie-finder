@@ -1,13 +1,159 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* DAY 5 */
+
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  width: 100%;
+  height: 100%;
 }
+
+body {
+width: 100%;
+height: 100%;
+margin: 0;
+font-family: Roboto;
+position: relative;
+}
+
+.background_6 {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#F92626, #BC2222, #640B0B);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+padding: 20px 0;
+}
+
+.imdb_card {
+  width: 350px;
+  height: 640px;
+  background: #121212;
+  border-radius: 2px;
+  color: #ffffff;
+  position: relative;
+}
+
+.movie_poster {
+  width: 350px;
+  height: 350px;
+  position: relative;
+}
+
+.movie_poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.movie_label {
+  position: absolute;
+  bottom: -37.5px;
+  background: #8E0800;
+  color: white;
+  width: 80%;
+  height: 75px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 30px;
+}
+
+.movie_label h2, .movie_label h4 {
+  margin: 0;
+}
+
+.movie_label h2 {
+  font-size: 28px;
+  margin-top: -3px;
+}
+
+.movie_label h4 {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.movie_content {
+  width: 100%;
+  height: calc(100% - 350px);
+  padding: 45px 40px 0 30px;
+}
+
+.mov_specs {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+}
+
+.mov_specs i {
+  font-size: 16px;
+  margin-right: 8px;
+  color: #FFD014;
+}
+
+.mov_specs p {
+  white-space: pre;
+}
+
+.mov_description {
+  font-size: 0.7rem;
+  font-weight: 300;
+}
+
+.mov_description h3 {
+  margin-top: 6px;
+}
+
+.buy_ticket {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.buy_ticket a {
+  display: flex;
+  align-items: center;
+  background: #8e0800;
+  color: #f5c518;
+  text-decoration: none;
+  width: 210px;
+  height: 45px;
+  transition: .3s ease-in-out;
+}
+
+.buy_ticket a:hover {
+  background: #b10000;
+}
+
+.buy_ticket a span:first-child {
+  width: calc(100% - 60px);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.buy_ticket a span:last-child {
+  width: 60px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 2px dashed #121212;
+}
+
+.buy_ticket a span:last-child svg {
+  width: 25px;
+}
+
+/* DAY 5 -------------------*/
