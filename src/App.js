@@ -4,7 +4,7 @@ import FilmCard from "./FilmCard";
 class App extends Component {
   state = {
     isLoading: true,
-    users: [],
+    data: [],
     error: null,
   };
 
@@ -16,7 +16,7 @@ class App extends Component {
       // ...then we update the users state
       .then(data =>
         this.setState({
-          users: data,
+          data: data,
           isLoading: false,
         })
       )
@@ -29,15 +29,16 @@ class App extends Component {
   }
 
   render() {
-    const { isLoading, users, error } = this.state;
+    const { isLoading, data, error } = this.state;
     return (
       <>
+        <FilmCard />
         <h1>Random User</h1>
         
         {error ? <p>{error.message}</p> : null}
         
         {!isLoading ? (
-          users.map((user) => {
+          data.map((user) => {
             const { username, name, email } = user;
             return (
               <div key={username}>
