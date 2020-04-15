@@ -1,13 +1,13 @@
 import React from "react";
 
-const FilmCard = () => {
+const FilmCard = (props) => {
   return (
     <>
       <div class="background_6">
         <div class="imdb_card">
           <div class="movie_poster">
             <img
-              src="https://www.dropbox.com/s/hfmx0mrfcantb1o/spideyposter.jpg?raw=1"
+              src="https://image.tmdb.org/t/p/w1280/5VTN0pR8gcqV3EPUHHfMGnJYN9L.jpg"
               alt=""
             />
               <div class="movie_label">
