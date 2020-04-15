@@ -3,24 +3,24 @@ import React from "react";
 const FilmCard = (props) => {
   return (
     <>
-      <div class="background_6">
-        <div class="imdb_card">
-          <div class="movie_poster">
+      <div className="background_6">
+        <div className="imdb_card">
+          <div className="movie_poster">
             <img
               src="https://image.tmdb.org/t/p/w1280/5VTN0pR8gcqV3EPUHHfMGnJYN9L.jpg"
               alt=""
             />
-              <div class="movie_label">
+              <div className="movie_label">
                 <h2>SPIDER-MAN</h2>
                 <h4>INTO THE SPIDER VERSE</h4>
               </div>
             </div>
-            <div class="movie_content">
-              <div class="mov_specs">
-                <i class="material-icons">star</i>
+            <div className="movie_content">
+              <div className="mov_specs">
+                <i className="material-icons">star</i>
                 <p>8.5 | 1h 57min | Animation, Action, Adventure</p>
               </div>
-              <div class="mov_description">
+              <div className="mov_description">
                 <h3>Storyline</h3>
                 <p>
                   Teen Miles Morales becomes Spider-Man of his reality, crossing
@@ -32,7 +32,7 @@ const FilmCard = (props) => {
                   Rothman
                 </p>
               </div>
-              <div class="buy_ticket">
+              <div className="buy_ticket">
                 <a href="#">
                   <span>BUY TICKET NOW</span>
                   <span>
