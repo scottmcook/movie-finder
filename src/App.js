@@ -4,6 +4,9 @@ import FilmCard from "./FilmCard";
 const api_key = `${process.env.REACT_APP_TMDB_API_KEY}`;
 const api = `https://api.themoviedb.org/3/movie/76341?api_key=${api_key}`;
 
+// https://developers.themoviedb.org/3/getting-started/images
+cost base_img_url = `https://image.tmdb.org/t/p`;
+
 class App extends Component {
   state = {
     isLoading: true,
@@ -36,19 +39,15 @@ class App extends Component {
   render() {
     const { isLoading, film, error } = this.state;
     const { id, homepage, poster_path, title } = film;
+
     return (
       <>
-        <FilmCard />
-        <h1>Random User</h1>
-
         {error ? <p>{error.message}</p> : null}
         {!isLoading ? (
-          <div key={id}>
-            <h1>{homepage}</h1>
-            <p>Poster: {poster_path}</p>
-            <p>Email Address: {title}</p>
-            <hr />
-          </div>
+          <FilmCard
+            title={title}
+            poster={poster_path}
+          />
         ) : (
           // If there is a delay in data, let's let the user know it's loading
           <h3>Loading...</h3>
