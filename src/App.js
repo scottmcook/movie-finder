@@ -5,7 +5,7 @@ const api_key = `${process.env.REACT_APP_TMDB_API_KEY}`;
 const api = `https://api.themoviedb.org/3/movie/76341?api_key=${api_key}`;
 
 // https://developers.themoviedb.org/3/getting-started/images
-cost base_img_url = `https://image.tmdb.org/t/p`;
+const base_img_url = `https://image.tmdb.org/t/p`;
 
 class App extends Component {
   state = {
