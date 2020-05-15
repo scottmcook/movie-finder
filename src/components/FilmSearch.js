@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import TextField from "@material-ui/core/TextField";
+import Button from '@material-ui/core/Button';
 
 
 const FilmSearch = (props) => {
@@ -28,7 +29,7 @@ const FilmSearch = (props) => {
         onChange={handleSearchInputChanges}
         variant="outlined" 
         />
-        <input onClick={callSearchFunction} type="submit" value="SEARCH" />
+        <Button variant="contained" color="primary" disableElevation onClick={callSearchFunction} type="submit" value="SEARCH">Search</Button>
     </form>
   );
 };
