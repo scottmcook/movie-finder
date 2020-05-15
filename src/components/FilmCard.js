@@ -23,11 +23,12 @@ const useStyles = makeStyles({
 // https://developers.themoviedb.org/3/getting-started/images
 const DEFAULT_POSTER = `https://image.tmdb.org/t/p/w1280/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg`;
 
+const BASE_POSTER_PATH = `https://image.tmdb.org/t/p/w1280/`
 
 
 export const FilmCard = ( { movie }) => {
   const classes = useStyles();
-  const poster = movie.poster_path === "N/A" ? DEFAULT_POSTER : movie.poster_path;
+  const poster = `${BASE_POSTER_PATH}${movie.poster_path}` === "N/A" ? DEFAULT_POSTER : `${BASE_POSTER_PATH}${movie.poster_path}`;
 
   return (
     <Card className={classes.root}>
