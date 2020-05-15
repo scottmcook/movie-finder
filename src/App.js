@@ -1,6 +1,19 @@
 import React, { useReducer, useEffect } from "react";
 import FilmCard from "./components/FilmCard";
 import FilmSearch from "./components/FilmSearch";
+import { makeStyles } from "@material-ui/core/styles";
+import Grid from "@material-ui/core/Grid";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: "center",
+    color: theme.palette.text.secondary,
+  },
+}));
 
 const api_key = `${process.env.REACT_APP_TMDB_API_KEY}`;
 const TMDB_API_URL = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&language=en-US&query=spider%20man&page=1&include_adult=false`;
@@ -41,6 +54,8 @@ const reducer = (state, action) => {
 };
 
 const App = () => {
+  const classes = useStyles();
+
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
@@ -60,7 +75,7 @@ const App = () => {
     });
 
     fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&language=en-US&query=${searchValue}&page=1&include_adult=false`
+      `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&language=en-US&query=${searchValue}&include_adult=false`
       // `https://www.omdbapi.com/?${searchValue}&apikey=4a3b711b`
     )
       .then((response) => response.json())
@@ -81,18 +96,24 @@ const App = () => {
 
   const { movies, errorMessage, loading } = state;
   return (
-    <>
-      <FilmSearch search={search} />
-      {loading && !errorMessage ? (
-        <span>loading...</span>
-      ) : errorMessage ? (
-        <div className="errorMessage">{errorMessage}</div>
-      ) : (
-        movies.map((movie, index) => (
-          <FilmCard key={`${index}-${movie.title}`} movie={movie} />
-        ))
-      )}
-    </>
+    <div className={classes.root}>
+      <Grid container spacing={3}>
+        <Grid item xs={12}>
+          <FilmSearch search={search} />
+        </Grid>
+        {loading && !errorMessage ? (
+          <span>loading...</span>
+        ) : errorMessage ? (
+          <div className="errorMessage">{errorMessage}</div>
+        ) : (
+          movies.map((movie, index) => (
+            <Grid item x={6}>
+              <FilmCard key={`${index}-${movie.title}`} movie={movie} />
+            </Grid>
+          ))
+        )}
+      </Grid>
+    </div>
   );
 };
 
