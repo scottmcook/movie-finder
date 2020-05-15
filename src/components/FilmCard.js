@@ -27,7 +27,7 @@ const DEFAULT_POSTER = `https://image.tmdb.org/t/p/w1280/iiZZdoQBEYBv6id8su7ImL0
 
 export const FilmCard = ( { movie }) => {
   const classes = useStyles();
-  const poster = movie.Poster === "N/A" ? DEFAULT_POSTER : movie.Poster;
+  const poster = movie.poster_path === "N/A" ? DEFAULT_POSTER : movie.poster_path;
 
   return (
     <Card className={classes.root}>
@@ -35,15 +35,15 @@ export const FilmCard = ( { movie }) => {
         <CardMedia
           className={classes.media}
           image={poster}
-          title={movie.Title}
+          title={movie.title}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            {movie.Title}
+            {movie.title}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            {movie.description}
-            {poster}
+            {movie.overview}
+            
           </Typography>
         </CardContent>
       </CardActionArea>

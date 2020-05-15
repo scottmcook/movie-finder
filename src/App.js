@@ -4,6 +4,7 @@ import FilmSearch from "./components/FilmSearch";
 
 const api_key = `${process.env.REACT_APP_TMDB_API_KEY}`;
 const TMDB_API_URL = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&language=en-US&query=spider%20man&page=1&include_adult=false`;
+
 // const TMDB_API_URL = `https://www.omdbapi.com/?s=man&apikey=4a3b711b`;
 
 // https://developers.themoviedb.org/3/getting-started/images
@@ -48,7 +49,7 @@ const App = () => {
       .then((jsonResponse) => {
         dispatch({
           type: "SEARCH_MOVIES_SUCCESS",
-          payload: jsonResponse.Search,
+          payload: jsonResponse.results,
         });
       });
   }, []);
@@ -67,7 +68,7 @@ const App = () => {
         if (jsonResponse.Response === "True") {
           dispatch({
             type: "SEARCH_MOVIES_SUCCESS",
-            payload: jsonResponse.Search,
+            payload: jsonResponse.results,
           });
         } else {
           dispatch({
@@ -88,7 +89,7 @@ const App = () => {
         <div className="errorMessage">{errorMessage}</div>
       ) : (
         movies.map((movie, index) => (
-          <FilmCard key={`${index}-${movie.Title}`} movie={movie} />
+          <FilmCard key={`${index}-${movie.title}`} movie={movie} />
         ))
       )}
     </>
