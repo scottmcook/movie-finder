@@ -80,13 +80,15 @@ const App = () => {
     )
       .then((response) => response.json())
       .then((jsonResponse) => {
-        if (jsonResponse.Response === "True") {
+        
+        console.log((jsonResponse));
+        if (jsonResponse.results.length >= 1) {
           dispatch({
             type: "SEARCH_MOVIES_SUCCESS",
             payload: jsonResponse.results,
           });
         } else {
-          dispatch({
+            dispatch({
             type: "SEARCH_MOVIES_FAILURE",
             error: jsonResponse.Error,
           });
