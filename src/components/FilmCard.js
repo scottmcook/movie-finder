@@ -10,28 +10,27 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 600,
+    maxWidth: 300,
   },
   media: {
-    height: 800,
+    height: 400,
   },
 });
-
 
 //let searchApi = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&language=en-US&query=${searchQuery}&page=1&include_adult=false`
 
 // https://developers.themoviedb.org/3/getting-started/images
-const DEFAULT_POSTER = `https://image.tmdb.org/t/p/w1280/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg`;
-
+const DEFAULT_POSTER = `https://via.placeholder.com/300x400?text=Poster+Not+Available`;
 const BASE_POSTER_PATH = `https://image.tmdb.org/t/p/w1280/`
-
 
 export const FilmCard = ( { movie }) => {
   const classes = useStyles();
-  const poster = `${BASE_POSTER_PATH}${movie.poster_path}` === "N/A" ? DEFAULT_POSTER : `${BASE_POSTER_PATH}${movie.poster_path}`;
+  console.log(movie.poster_path);
+  
+  const poster = movie.poster_path === null ? DEFAULT_POSTER : `${BASE_POSTER_PATH}${movie.poster_path}`;
 
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} >
       <CardActionArea>
         <CardMedia
           className={classes.media}
@@ -49,11 +48,8 @@ export const FilmCard = ( { movie }) => {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button color="primary">
           Add to Favorites
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
         </Button>
       </CardActions>
     </Card>
