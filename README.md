@@ -3,13 +3,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Other sources and tools
 - [TMDB](https://developers.themoviedb.org/3/getting-started/images)
 - [FreeCodeCamp](https://www.freecodecamp.org/news/how-to-build-a-movie-search-app-using-react-hooks-24eb72ddfaf7/) article on using React Hooks in a movie search app
-- 
+- [Material-UI](https://material-ui.com/)
 
-
+## Challenges
+- API
+- Converting from legacy state management to hooks
+- Setting up ```.env``` production files to hold API key
+- Securely passing API key to Netlify 
 
 ## Available Scripts
 
-In the project directory, you can run:
+Build scripts are the standard create-react-app
 
 ### `yarn start`
 
