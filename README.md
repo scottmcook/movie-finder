@@ -6,7 +6,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [Material-UI](https://material-ui.com/)
 
 ## Challenges
-- API
 - Converting from legacy state management to hooks
 - Setting up ```.env``` production files to hold API key
 - Securely passing API key to Netlify 
