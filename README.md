@@ -13,7 +13,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-Build scripts are the standard create-react-app
+Build scripts are standard create-react-app
 
 ### `yarn start`
 
