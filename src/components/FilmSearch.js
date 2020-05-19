@@ -3,6 +3,8 @@ import TextField from "@material-ui/core/TextField";
 import Button from '@material-ui/core/Button';
 import Grid from "@material-ui/core/Grid";
 
+// const fullWidthButton = [theme.breakpoints.down("sm")] ? true : false;
+
 const FilmSearch = (props) => {
   const [searchValue, setSearchValue] = useState("");
 
@@ -22,7 +24,7 @@ const FilmSearch = (props) => {
 
   return (
     <Grid justify={'center'} alignItems={'center'} container spacing={3}>
-      <Grid item xs={4}>
+      <Grid item lg={6} xs={8}>
         <TextField 
           fullWidth={true}
           label="Search film database"
@@ -32,8 +34,9 @@ const FilmSearch = (props) => {
           required={true}
         />
       </Grid>
-      <Grid item>
+      <Grid item lg={2} xs={8}>
         <Button 
+          fullWidth={true}
           variant="contained" 
           color="primary" 
           onClick={callSearchFunction} 
