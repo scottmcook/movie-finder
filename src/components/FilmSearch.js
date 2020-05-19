@@ -28,6 +28,7 @@ const FilmSearch = (props) => {
           label="Search film database"
           value={searchValue}
           onChange={handleSearchInputChanges}
+          placeholder="Sunset Rock"
           variant="outlined" 
           required={true}
         />
