@@ -72,13 +72,10 @@ const App = () => {
 
     fetch(
       `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&language=en-US&query=${searchValue}&include_adult=false`
-      // `https://www.omdbapi.com/?${searchValue}&apikey=4a3b711b`
     )
       .then((response) => response.json())
       .then((jsonResponse) => {
-        
-        console.log((jsonResponse));
-        if (jsonResponse.results.length >= 1) {
+        if (jsonResponse.results.length !== null) {
           dispatch({
             type: "SEARCH_MOVIES_SUCCESS",
             payload: jsonResponse.results,
@@ -105,7 +102,7 @@ const App = () => {
           <div className="errorMessage">{errorMessage}</div>
         ) : (
           movies.map((movie, index) => (
-            <Grid item x={3}>
+            <Grid item >
               <FilmCard key={`${index}-${movie.title}`} movie={movie} />
             </Grid>
           ))
