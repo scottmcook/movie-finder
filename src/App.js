@@ -105,7 +105,7 @@ const App = () => {
           <div className="errorMessage">{errorMessage}</div>
         ) : (
           movies.map((movie, index) => (
-            <Grid item x={6}>
+            <Grid item x={3}>
               <FilmCard key={`${index}-${movie.title}`} movie={movie} />
             </Grid>
           ))
