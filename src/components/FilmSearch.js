@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import TextField from "@material-ui/core/TextField";
 import Button from '@material-ui/core/Button';
+import Grid from "@material-ui/core/Grid";
+
+
 
 
 const FilmSearch = (props) => {
@@ -20,17 +23,21 @@ const FilmSearch = (props) => {
     resetInputField();
   }
 
-
   return (
-    <form>
-      <TextField 
-        label="Search Film"
-        value={searchValue}
-        onChange={handleSearchInputChanges}
-        variant="outlined" 
+    <Grid justify={'center'} alignItems={'center'} container spacing={3}>
+      <Grid item xs={4}>
+        <TextField 
+          fullWidth={true}
+          label="Search film database"
+          value={searchValue}
+          onChange={handleSearchInputChanges}
+          variant="outlined" 
         />
-        <Button variant="contained" color="primary" disableElevation onClick={callSearchFunction} type="submit" value="SEARCH">Search</Button>
-    </form>
+      </Grid>
+      <Grid item>
+        <Button variant="contained" color="primary" onClick={callSearchFunction} type="submit" value="SEARCH">Search</Button>
+      </Grid>
+    </Grid>
   );
 };
 
