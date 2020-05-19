@@ -18,10 +18,6 @@ const useStyles = makeStyles((theme) => ({
 const api_key = `${process.env.REACT_APP_TMDB_API_KEY}`;
 const TMDB_API_URL = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&language=en-US&query=spider%20man&page=1&include_adult=false`;
 
-// const TMDB_API_URL = `https://www.omdbapi.com/?s=man&apikey=4a3b711b`;
-
-// https://developers.themoviedb.org/3/getting-started/images
-
 const initialState = {
   loading: true,
   movies: [],
@@ -99,7 +95,7 @@ const App = () => {
   const { movies, errorMessage, loading } = state;
   return (
     <div className={classes.root}>
-      <Grid container spacing={3}>
+      <Grid justify={'center'} container spacing={3}>
         <Grid item xs={12}>
           <FilmSearch search={search} />
         </Grid>
