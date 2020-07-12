@@ -22,6 +22,13 @@ const FilmSearch = (props) => {
     resetInputField();
   }
 
+  const handleEnter = (e) => {
+    if (e.key === 'Enter') {
+      props.search(encodeURI(searchValue));
+      resetInputField();
+    }
+  }
+
   return (
     <Grid justify={'center'} alignItems={'center'} container spacing={3}>
       <Grid item lg={6} xs={8}>
@@ -30,7 +37,8 @@ const FilmSearch = (props) => {
           label="Search film database"
           value={searchValue}
           onChange={handleSearchInputChanges}
-          placeholder="Sunset Rock"
+          onKeyPress={handleEnter}
+          placeholder="sunset rock"
           variant="outlined" 
           required={true}
         />
