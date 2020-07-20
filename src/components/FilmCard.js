@@ -38,7 +38,7 @@ export const FilmCard = ( { movie }) => {
           <Typography gutterBottom variant="h5" component="h2">
             {movie.title}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography variant="body2" noWrap={true} color="textSecondary" component="p">
             {movie.overview}
           </Typography>
         </CardContent>
