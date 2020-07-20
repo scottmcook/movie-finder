@@ -38,7 +38,7 @@ const FilmSearch = (props) => {
           value={searchValue}
           onChange={handleSearchInputChanges}
           onKeyPress={handleEnter}
-          placeholder="sunset rock"
+          placeholder="Ex: Sunset Rock"
           variant="outlined" 
           required={true}
         />
