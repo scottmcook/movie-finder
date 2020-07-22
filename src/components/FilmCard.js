@@ -41,10 +41,10 @@ export const FilmCard = ( { movie }) => {
           <Typography gutterBottom variant="h5" component="h2">
             {movie.title}
           </Typography>
+          <FilmRating />
           <Typography variant="body2" noWrap={true} color="textSecondary" component="p">
             {movie.overview}
           </Typography>
-          <FilmRating />
         </CardContent>
       </CardActionArea>
     </Card>
