@@ -6,6 +6,9 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 
+import FilmRating from '../lab/FilmRating';
+
+
 const useStyles = makeStyles({
   root: {
     maxWidth: 300,
@@ -41,6 +44,7 @@ export const FilmCard = ( { movie }) => {
           <Typography variant="body2" noWrap={true} color="textSecondary" component="p">
             {movie.overview}
           </Typography>
+          <FilmRating />
         </CardContent>
       </CardActionArea>
     </Card>
