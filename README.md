@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and is hosted on [Netlify](https://my-favorite-movie.netlify.app/).
+View it live [here](https://super-movie-finder.netlify.app/)
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and is hosted on Netlify.
 
 ## Resources and tools
 - [TMDB](https://developers.themoviedb.org/3/getting-started/images)
