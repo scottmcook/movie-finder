@@ -1,44 +1,46 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Rating from '@material-ui/lab/Rating';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import SentimentVeryDissatisfiedIcon from '@material-ui/icons/SentimentVeryDissatisfied';
-import SentimentDissatisfiedIcon from '@material-ui/icons/SentimentDissatisfied';
-import SentimentSatisfiedIcon from '@material-ui/icons/SentimentSatisfied';
-import SentimentSatisfiedAltIcon from '@material-ui/icons/SentimentSatisfiedAltOutlined';
-import SentimentVerySatisfiedIcon from '@material-ui/icons/SentimentVerySatisfied';
-
+import React from "react";
+import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core/styles";
+import Rating from "@material-ui/lab/Rating";
+import FavoriteIcon from "@material-ui/icons/Favorite";
+import SentimentVeryDissatisfiedIcon from "@material-ui/icons/SentimentVeryDissatisfied";
+import SentimentDissatisfiedIcon from "@material-ui/icons/SentimentDissatisfied";
+import SentimentSatisfiedIcon from "@material-ui/icons/SentimentSatisfied";
+import SentimentSatisfiedAltIcon from "@material-ui/icons/SentimentSatisfiedAltOutlined";
+import SentimentVerySatisfiedIcon from "@material-ui/icons/SentimentVerySatisfied";
 
 const StyledRating = withStyles({
+  root: {
+    marginBottom: 16
+  },
   iconFilled: {
-    color: '#ff6d75',
+    color: "#ff6d75",
   },
   iconHover: {
-    color: '#ff3d47',
+    color: "#ff3d47",
   },
 })(Rating);
 
 const customIcons = {
   1: {
     icon: <SentimentVeryDissatisfiedIcon />,
-    label: 'Very Dissatisfied',
+    label: "Very Dissatisfied",
   },
   2: {
     icon: <SentimentDissatisfiedIcon />,
-    label: 'Dissatisfied',
+    label: "Dissatisfied",
   },
   3: {
     icon: <SentimentSatisfiedIcon />,
-    label: 'Neutral',
+    label: "Neutral",
   },
   4: {
     icon: <SentimentSatisfiedAltIcon />,
-    label: 'Satisfied',
+    label: "Satisfied",
   },
   5: {
     icon: <SentimentVerySatisfiedIcon />,
-    label: 'Very Satisfied',
+    label: "Very Satisfied",
   },
 };
 
@@ -54,13 +56,10 @@ IconContainer.propTypes = {
 export default function FilmRating() {
   return (
     <>
-        <StyledRating
-          name="customized-color"
-          defaultValue={2}
-          getLabelText={(value) => `${value} Heart${value !== 1 ? 's' : ''}`}
-          // precision={0.5}
-          icon={<FavoriteIcon fontSize="inherit" />}
-        />
+      <StyledRating
+        defaultValue={3}
+        icon={<FavoriteIcon fontSize="inherit" />}
+      />
     </>
   );
 }
