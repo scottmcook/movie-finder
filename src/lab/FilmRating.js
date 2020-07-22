@@ -58,7 +58,7 @@ export default function FilmRating() {
           name="customized-color"
           defaultValue={2}
           getLabelText={(value) => `${value} Heart${value !== 1 ? 's' : ''}`}
-          precision={0.5}
+          // precision={0.5}
           icon={<FavoriteIcon fontSize="inherit" />}
         />
     </>
