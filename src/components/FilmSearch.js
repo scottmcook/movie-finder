@@ -1,13 +1,28 @@
 import React, { useState } from "react";
+import { withStyles } from '@material-ui/core/styles';
 import TextField from "@material-ui/core/TextField";
 // import Button from '@material-ui/core/Button';
 import Grid from "@material-ui/core/Grid";
 import InputAdornment from '@material-ui/core/InputAdornment';
 import Typography from '@material-ui/core/Typography';
-
 import Search from '@material-ui/icons/Search';
 
-
+const CustomInput = withStyles({
+  root: {
+    '& .MuiOutlinedInput-root': {
+      color: '#ffffff',
+      '& fieldset': {
+        borderColor: '#ffffff',
+      },
+      '&:hover fieldset': {
+        borderColor: '#ffffff',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: '#ffffff',
+      },
+    },
+  },
+})(TextField);
 
 
 const FilmSearch = (props) => {
@@ -42,7 +57,7 @@ const FilmSearch = (props) => {
     </Grid>
     <Grid container justify={'center'} alignItems={'center'} spacing={3}>
       <Grid item lg={3} m={6} xs={8}>
-        <TextField 
+        <CustomInput 
           autoFocus={true}
           fullWidth={true}
           onChange={handleSearchInputChanges}
