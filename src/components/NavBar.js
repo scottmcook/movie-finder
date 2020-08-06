@@ -11,7 +11,9 @@ import Mail from '@material-ui/icons/Mail';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    backgroundColor: '#000a12'
   },
+
   title: {
     flexGrow: 1,
   },
@@ -20,21 +22,19 @@ const useStyles = makeStyles((theme) => ({
 export default function ButtonAppBar() {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h6" className={classes.title}>
-            <Link href="https://www.runnincode.com" color="inherit" >
-              Scott Cook
-            </Link>
-          </Typography>
-          <IconButton edge="end" color="inherit" aria-label="mail">
-            <Link href="mailto:scott.madison.cook@gmail.com?subject=I want to hire you" color="inherit">
-              <Mail />
-            </Link>
-          </IconButton>
-        </Toolbar>
-      </AppBar>
-    </div>
+    <AppBar className={classes.root} position="static">
+      <Toolbar>
+        <Typography variant="h6" className={classes.title}>
+          <Link href="https://www.runnincode.com" color="inherit" >
+            Scott Cook
+          </Link>
+        </Typography>
+        <IconButton edge="end" color="inherit" aria-label="mail">
+          <Link href="mailto:scott.madison.cook@gmail.com?subject=I want to hire you" color="inherit">
+            <Mail />
+          </Link>
+        </IconButton>
+      </Toolbar>
+    </AppBar>
   );
 }
