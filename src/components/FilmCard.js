@@ -31,7 +31,7 @@ export const FilmCard = ( { movie }) => {
 
   return (
     <Card className={classes.root} >
-      <CardActionArea>
+      {/* <CardActionArea> */}
         <CardMedia
           className={classes.media}
           image={poster}
@@ -46,7 +46,7 @@ export const FilmCard = ( { movie }) => {
             {movie.overview}
           </Typography>
         </CardContent>
-      </CardActionArea>
+      {/* </CardActionArea> */}
     </Card>
   );
 }
