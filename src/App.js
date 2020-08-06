@@ -90,7 +90,7 @@ const App = () => {
     <>
       <NavBar />
       <div className={classes.root}>
-        <Grid justify={'center'} container spacing={3}>
+        <Grid container justify={'center'} spacing={3}>
           <Grid item xs={12}>
             <FilmSearch search={search} />
           </Grid>
