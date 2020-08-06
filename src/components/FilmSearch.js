@@ -5,7 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import Typography from '@material-ui/core/Typography';
 
 const FilmSearch = (props) => {
-  const [searchValue, setSearchValue] = useState("");
+  const [searchValue, setSearchValue] = useState("Spider Man");
 
   const handleSearchInputChanges = (e)  => {
     setSearchValue(e.target.value);
@@ -29,7 +29,6 @@ const FilmSearch = (props) => {
   }
 
   const handleBlankEntry = () => {
-  
     return searchValue === "" ? true : false
   }
 
@@ -53,7 +52,7 @@ const FilmSearch = (props) => {
           required={true}
         />
       </Grid>
-      <Grid item lg={1} m={6} xs={4}>
+      {/* <Grid item lg={1} m={6} xs={4}>
         <Button 
           fullWidth={true}
           variant="contained" 
@@ -62,7 +61,7 @@ const FilmSearch = (props) => {
           type="submit" 
           value="SEARCH">Search
         </Button>
-      </Grid>
+      </Grid> */}
     </Grid>
     </>
   );
