@@ -58,7 +58,10 @@ export default function FilmRating() {
     <>
       <StyledRating
         defaultValue={3}
-        icon={<FavoriteIcon fontSize="inherit" />}
+        precision={0.5}
+        icon={<FavoriteIcon 
+        fontSize="inherit" 
+      />}
       />
     </>
   );
