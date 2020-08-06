@@ -1,11 +1,23 @@
 import React, { useState } from "react";
 import TextField from "@material-ui/core/TextField";
-import Button from '@material-ui/core/Button';
+// import Button from '@material-ui/core/Button';
 import Grid from "@material-ui/core/Grid";
+import InputAdornment from '@material-ui/core/InputAdornment';
 import Typography from '@material-ui/core/Typography';
+import { makeStyles } from "@material-ui/core/styles";
+
+import Search from '@material-ui/icons/Search';
+
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    
+  },
+}));
+
 
 const FilmSearch = (props) => {
-  const [searchValue, setSearchValue] = useState("Spider Man");
+  const [searchValue, setSearchValue] = useState("");
 
   const handleSearchInputChanges = (e)  => {
     setSearchValue(e.target.value);
@@ -28,26 +40,28 @@ const FilmSearch = (props) => {
     }
   }
 
-  const handleBlankEntry = () => {
-    return searchValue === "" ? true : false
-  }
-
   return (
     <>
     <Grid container justify={'center'} style={{ margin: 15 }}>
-      <Typography variant="h4">Movie Finder</Typography>
+      <Typography variant="h4" style={{ color: '#ffffff' }}>Movie Finder</Typography>
     </Grid>
     <Grid container justify={'center'} alignItems={'center'} spacing={3}>
       <Grid item lg={3} m={6} xs={8}>
         <TextField 
           autoFocus={true}
-          error={ searchValue === "" ? true : false }
           fullWidth={true}
-          label="Search TMDB"
           value={searchValue}
           onChange={handleSearchInputChanges}
           onKeyPress={ handleEnter }
           placeholder="Sunset Rock"
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <Search />
+              </InputAdornment>
+            ),
+          }}
+          style={{ border: '#ffffff' }}
           variant="outlined" 
           required={true}
         />
