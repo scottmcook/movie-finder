@@ -91,7 +91,7 @@ const App = () => {
       <NavBar />
       <div className={classes.root}>
         <Grid container justify={'center'} spacing={3}>
-          <Grid item xs={12}>
+          <Grid item xs={12} style={{ backgroundColor: '#263238', padding: '40px 0px' }}>
             <FilmSearch search={search} />
           </Grid>
           {loading && !errorMessage ? (
