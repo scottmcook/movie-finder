@@ -12,9 +12,6 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
   title: {
     flexGrow: 1,
   },
@@ -31,7 +28,7 @@ export default function ButtonAppBar() {
               Scott Cook
             </Link>
           </Typography>
-          <IconButton edge="end" className={classes.menuButton} color="inherit" aria-label="mail">
+          <IconButton edge="end" color="inherit" aria-label="mail">
             <Link href="mailto:scott.madison.cook@gmail.com?subject=I want to hire you" color="inherit">
               <Mail />
             </Link>

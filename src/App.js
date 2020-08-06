@@ -9,11 +9,6 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
-  },
 }));
 
 const api_key = `${process.env.REACT_APP_TMDB_API_KEY}`;
