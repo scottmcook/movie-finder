@@ -4,6 +4,8 @@ import FilmSearch from "./components/FilmSearch";
 import NavBar from './components/NavBar';
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
+import Typography from '@material-ui/core/Typography';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -95,9 +97,9 @@ const App = () => {
             <FilmSearch search={search} />
           </Grid>
           {loading && !errorMessage ? (
-            <span>loading...</span>
+            <Typography>loading...</Typography>
           ) : errorMessage ? (
-            <div className="errorMessage">{errorMessage}</div>
+            <Typography className="errorMessage">{errorMessage}</Typography>
           ) : (
             movies.map((movie, index) => (
               <Grid item >
