@@ -1,6 +1,7 @@
 import React, { useReducer, useEffect } from "react";
 import FilmCard from "./components/FilmCard";
 import FilmSearch from "./components/FilmSearch";
+import NavBar from './components/NavBar';
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 
@@ -91,24 +92,27 @@ const App = () => {
 
   const { movies, errorMessage, loading } = state;
   return (
-    <div className={classes.root}>
-      <Grid justify={'center'} container spacing={3}>
-        <Grid item xs={12}>
-          <FilmSearch search={search} />
+    <>
+      <NavBar />
+      <div className={classes.root}>
+        <Grid justify={'center'} container spacing={3}>
+          <Grid item xs={12}>
+            <FilmSearch search={search} />
+          </Grid>
+          {loading && !errorMessage ? (
+            <span>loading...</span>
+          ) : errorMessage ? (
+            <div className="errorMessage">{errorMessage}</div>
+          ) : (
+            movies.map((movie, index) => (
+              <Grid item >
+                <FilmCard key={`${index}-${movie.title}`} movie={movie} />
+              </Grid>
+            ))
+          )}
         </Grid>
-        {loading && !errorMessage ? (
-          <span>loading...</span>
-        ) : errorMessage ? (
-          <div className="errorMessage">{errorMessage}</div>
-        ) : (
-          movies.map((movie, index) => (
-            <Grid item >
-              <FilmCard key={`${index}-${movie.title}`} movie={movie} />
-            </Grid>
-          ))
-        )}
-      </Grid>
-    </div>
+      </div>
+    </>
   );
 };
 
