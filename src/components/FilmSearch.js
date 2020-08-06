@@ -4,16 +4,10 @@ import TextField from "@material-ui/core/TextField";
 import Grid from "@material-ui/core/Grid";
 import InputAdornment from '@material-ui/core/InputAdornment';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from "@material-ui/core/styles";
 
 import Search from '@material-ui/icons/Search';
 
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    
-  },
-}));
 
 
 const FilmSearch = (props) => {
@@ -28,16 +22,17 @@ const FilmSearch = (props) => {
   }
 
   const callSearchFunction = (e) => {
-    e.preventDefault();
-    props.search(encodeURI(searchValue));
-    resetInputField();
+    // e.preventDefault();
+    if (searchValue !== "") {
+      props.search(encodeURI(searchValue));
+      resetInputField();
+    } 
   }
 
   const handleEnter = (e) => {
-    if (e.key === 'Enter') {
-      props.search(encodeURI(searchValue));
-      resetInputField();
-    }
+    if (e.key === 'Enter' && searchValue !== "") {
+      callSearchFunction();
+    } 
   }
 
   return (
@@ -50,9 +45,8 @@ const FilmSearch = (props) => {
         <TextField 
           autoFocus={true}
           fullWidth={true}
-          value={searchValue}
           onChange={handleSearchInputChanges}
-          onKeyPress={ handleEnter }
+          onKeyPress={handleEnter}
           placeholder="Sunset Rock"
           InputProps={{
             startAdornment: (
@@ -61,7 +55,8 @@ const FilmSearch = (props) => {
               </InputAdornment>
             ),
           }}
-          style={{ border: '#ffffff' }}
+          style={{ border: '#ffffff', color: '#ffffff' }}
+          value={searchValue}
           variant="outlined" 
           required={true}
         />
