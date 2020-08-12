@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
 export default function ButtonAppBar() {
   const classes = useStyles();
   return (
-    <AppBar className={classes.root} position="static">
+    <AppBar className={classes.root} position="relative">
       <Toolbar>
         <Typography variant="h6" className={classes.title}>
           <Link href="https://www.runnincode.com" color="inherit" >
