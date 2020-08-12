@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { withStyles } from '@material-ui/core/styles';
 import TextField from "@material-ui/core/TextField";
-// import Button from '@material-ui/core/Button';
+import Button from '@material-ui/core/Button';
 import Grid from "@material-ui/core/Grid";
 import InputAdornment from '@material-ui/core/InputAdornment';
 import Typography from '@material-ui/core/Typography';
@@ -76,16 +76,16 @@ const FilmSearch = (props) => {
           required={true}
         />
       </Grid>
-      {/* <Grid item lg={1} m={6} xs={4}>
+      <Grid item lg={1} m={6} xs={4}>
         <Button 
           fullWidth={true}
           variant="contained" 
-          color="primary" 
-          onClick={ searchValue !== "" ? callSearchFunction : handleBlankEntry } 
+          color="dark" 
+          // onClick={ searchValue !== "" ? callSearchFunction : handleBlankEntry } 
           type="submit" 
           value="SEARCH">Search
         </Button>
-      </Grid> */}
+      </Grid>
     </Grid>
     </>
   );
