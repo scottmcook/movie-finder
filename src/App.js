@@ -97,7 +97,7 @@ const App = () => {
             <FilmSearch search={search} />
           </Grid>
           {loading && !errorMessage ? (
-            <Typography>loading...</Typography>
+            <Typography variant="h4">loading...</Typography>
           ) : errorMessage ? (
             <Typography className="errorMessage">{errorMessage}</Typography>
           ) : (
