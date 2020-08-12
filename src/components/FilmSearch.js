@@ -76,12 +76,12 @@ const FilmSearch = (props) => {
           required={true}
         />
       </Grid>
-      <Grid item lg={1} m={6} xs={4}>
+      <Grid item lg={2} m={6} xs={6}>
         <Button 
           fullWidth={true}
           variant="contained" 
           color="dark" 
-          // onClick={ searchValue !== "" ? callSearchFunction : handleBlankEntry } 
+          onClick={ callSearchFunction } 
           type="submit" 
           value="SEARCH">Search
         </Button>
