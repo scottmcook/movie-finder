@@ -1,6 +1,6 @@
-## Movie Finder
+## [Movie Finder](https://super-movie-finder.netlify.app/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), uses custom [Material UI](https://material-ui.com/) components, and is hosted with [Netlify](https://super-movie-finder.netlify.app/).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), uses custom [Material UI](https://material-ui.com/) components, and is hosted with [Netlify](https://www.netlify.com/).
 
 
 ### Work in progress - future features
