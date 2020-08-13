@@ -1,8 +1,13 @@
 ## Movie Finder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), uses custom Material UI components, and is hosted with Netlify.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), uses custom [Material UI](https://material-ui.com/) components, and is hosted with [Netlify](https://super-movie-finder.netlify.app/).
 
-View it [live](https://super-movie-finder.netlify.app/)
+
+### Work in progress - future features
+- Save user ratings.
+- Modal display with additional information.
+- "Add to watchlist". 
+
 
 ### Recent updates - Aug 13, 2020
 - Custom app bar
@@ -16,11 +21,12 @@ View it [live](https://super-movie-finder.netlify.app/)
 - [Material-UI](https://material-ui.com/)
 
 ## Challenges
+- App bar positioning on mobile
 - Converting from legacy state management to hooks
 - Setting up ```.env``` production files to hold API key
 - Securely passing API key to Netlify 
 
-## Available Scripts
+## Scripts
 
 Build scripts are standard create-react-app
 
