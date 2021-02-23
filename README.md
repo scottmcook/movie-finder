@@ -2,12 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), uses custom [Material UI](https://material-ui.com/) components, and is hosted with [Netlify](https://www.netlify.com/).
 
-
 ### Work in progress - future features
 - Save user ratings.
 - Modal display with additional information.
 - "Add to watchlist". 
-
 
 ### Recent updates - Aug 13, 2020
 - Custom app bar
