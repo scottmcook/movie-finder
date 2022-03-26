@@ -8,7 +8,19 @@ import Link from '@material-ui/core/Link';
 import IconButton from '@material-ui/core/IconButton';
 import Mail from '@material-ui/icons/Mail';
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+    backgroundColor: '#000a12'
+  },
+
+  title: {
+    flexGrow: 1,
+  },
+}));
+
 export default function ButtonAppBar() {
+  const classes = useStyles();
   return (
     <AppBar className={classes.root} position="relative">
       <Toolbar>
