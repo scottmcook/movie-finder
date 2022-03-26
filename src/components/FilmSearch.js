@@ -62,7 +62,7 @@ const FilmSearch = (props) => {
           fullWidth={true}
           onChange={handleSearchInputChanges}
           onKeyPress={handleEnter}
-          placeholder="Spider Man"
+          placeholder="Sunset Rock"
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
