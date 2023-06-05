@@ -7,7 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Modal display with additional information.
 - "Add to watchlist". 
 
-### Recent updates - Aug 13, 2020
+### Updates - Aug 13, 2020
 - Custom app bar
 - Dark mode UI 
 - Ratings system
